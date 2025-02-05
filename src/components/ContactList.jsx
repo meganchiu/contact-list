@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import ContactRow from "./ContactRow";
+import './ContactList.css'
 
 function ContactList({setSelectedContactId}) {
   const [contacts, setContacts] = useState([])
@@ -24,7 +25,7 @@ function ContactList({setSelectedContactId}) {
   // console.log("Contacts:", contacts);
 
   return (
-    <table>
+    <table id="contactListTable">
     <thead>
       <tr>
         <th colSpan="3">Contact List</th>

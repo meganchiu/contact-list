@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import './selectedContact.css'
 
 function SelectedContact({ selectedContactId, setSelectedContactId }) {
   const [contact, setContact] = useState(null);
@@ -30,7 +31,7 @@ function SelectedContact({ selectedContactId, setSelectedContactId }) {
   }
 
   return (
-    <div>
+    <div id="contactDetails">
       <h2>Contact Details</h2>
       <p><strong>Name:</strong> {contact.name}</p>
       <p><strong>Email:</strong> {contact.email}</p>
@@ -38,7 +39,7 @@ function SelectedContact({ selectedContactId, setSelectedContactId }) {
       <p><strong>Company:</strong> {contact.company.name}</p>
       <p><strong>Website:</strong> {contact.website}</p>
       <p><strong>Address:</strong> {contact.address.street}, {contact.address.city}</p>
-      <button onClick={() => setSelectedContactId(null)}>Go Back to Contact List</button>
+      <button class="goBackBtn" onClick={() => setSelectedContactId(null)}>Go Back to Contact List</button>
     </div>
   );
 }
